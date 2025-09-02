@@ -1,4 +1,3 @@
-def call()
-{
+def call(){
   echo "Beginning the pipeline execution"
 }
