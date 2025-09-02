@@ -1,9 +1,10 @@
 def call(){
-       dir('Django APP') {  // Change to subdirectory if needed
-                sh '''
+
+         dir('/home/swapnil/Desktop/django-notes-app') {
+           sh '''
                     pwd
                     ls -la
                     docker build -t notes-app .
                 '''
-       }
+}
 }
