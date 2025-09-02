@@ -5,4 +5,5 @@ def call(){
                     ls -la
                     docker build -t notes-app .
                 '''
+       }
 }
