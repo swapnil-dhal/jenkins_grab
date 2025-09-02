@@ -1,5 +1,3 @@
 def call() {
-    sh """
-       git clone https://github.com/swapnil-dhal/django-notes-app.git
-    """
+    git branch: 'main',  url: 'https://github.com/swapnil-dhal/django-notes-app.git'
 }
