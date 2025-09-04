@@ -1,4 +1,4 @@
-def dockerPush(credentialsId, appname, appversion) {
+def call(credentialsId, appname, appversion) {
     withCredentials([usernamePassword(credentialsId: credentialsId, 
                                      usernameVariable: 'DOCKER_USER', 
                                      passwordVariable: 'DOCKER_PASS')]) {
