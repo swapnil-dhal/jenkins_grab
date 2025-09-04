@@ -4,7 +4,8 @@ def call(credentialsId, appname, appversion) {
                                      passwordVariable: 'DOCKER_PASS')]) {
         sh """
             echo \$DOCKER_PASS | docker login -u \$DOCKER_USER --password-stdin
-            docker push ${appname}:${appversion}
+            docker tag ${appname}:${appversion} \$DOCKER_USER/${appname}:${appversion}
+            docker push \$DOCKER_USER/${appname}:${appversion}
         """
     }
 }
