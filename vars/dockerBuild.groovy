@@ -1,4 +1,4 @@
-def dockerBuild(appname, appversion) {
+def call(appname, appversion) {
     sh """
         docker build -t ${appname}:${appversion} .
     """
